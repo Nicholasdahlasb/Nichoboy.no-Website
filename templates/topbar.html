@@ -14,30 +14,78 @@
             overflow: hidden;
         }
 
-        .topbar a {
+        .topbar a, .dropbtn {
             float: left;
             display: block;
             color: #f2f2f2;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            background-color: inherit;
+            font-family: inherit;
         }
 
-        .topbar a:hover {
+        .topbar a:hover, .dropdown:hover .dropbtn {
             background-color: #ddd;
             color: black;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            padding-top: 48px;
+        }
+
+        .dropdown-content a {
+            float:
+            padding: 12px 16px;
+            text-decoration: none;
+            background-color: #333;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+             style="padding-top: 14px;"
         }
     </style>
 </head>
 <body>
     <div class="topbar">
-        <a href="/static">Home</a>
-        <a href="/bluemap">Bluemap</a>
-        <a href="/updates">Updates</a>
-        <a href="/doom">Doom</a>
-        <a href="/discord">Discord Bot</a>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="/">Home</a>
+                <a href="/bluemap">Bluemap</a>
+                <a href="/updates">Updates</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="/doom">Doom</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Discord</button>
+            <div class="dropdown-content">
+                <a href="/discord">Discord Bot</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-
-
