@@ -3,8 +3,15 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
+def main():
+    return render_template('main.html')
+@app.route('/mc')
 def index():
     return render_template('index.html')
+
+@app.route('/mario')
+def mario():
+    return render_template('mario.html')
 
 @app.route('/updates')
 def updates():
