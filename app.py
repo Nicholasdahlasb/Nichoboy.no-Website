@@ -13,6 +13,19 @@ def index():
 def mario():
     return render_template('mario.html')
 
+@app.route('/skribbl')
+def skribbl():
+    return render_template('skribbl.html')
+
+@app.route('/gartic-phone')
+def gartic():
+    return render_template('gartic-phone.html')
+
+@app.route('/gartic-join')
+def garticjoin():
+    return render_template('gartic-join.html')
+
+
 @app.route('/updates')
 def updates():
     return render_template('update-log.html')

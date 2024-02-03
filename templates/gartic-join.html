@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenke Omdirigerer</title>
+    <style>
+        :root {
+            --secondary-color: #1a1a1a;
+            --background-start: #ffcc29;
+            --background-end: #f06;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom left, var(--background-start), var(--background-end));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #topBar {
+            width: 100%;
+            padding: 0px;
+        }
+
+        #linkBar {
+            width: 80%;
+            padding: 20px;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #linkInput {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #redirectButton {
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        #websiteFrame {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--secondary-color);
+            border: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        #inviteText {
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="topBar">
+        {% include 'topbar.html' %}
+    </div>
+
+    <div id="linkBar">
+        <p id="inviteText">Lim inn invitasjonslenken:</p>
+        <input type="text" id="linkInput" placeholder="For eksempel: https://garticphone.com/en/?c=01b185d1b2">
+        <button id="redirectButton" onclick="redirect()">Join</button>
+    </div>
+
+    <iframe id="websiteFrame" allowfullscreen=""></iframe>
+    <script>
+        function redirect() {
+            const linkInput = document.getElementById('linkInput').value;
+            const linkBar = document.getElementById('linkBar');
+            const websiteFrame = document.getElementById('websiteFrame');
+
+            linkBar.style.display = 'none';
+            websiteFrame.style.display = 'block';
+
+            websiteFrame.src = linkInput;
+        }
+    </script>
+</body>
+</html>
