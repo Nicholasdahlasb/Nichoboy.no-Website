@@ -21,6 +21,9 @@ def skribbl():
 def gartic():
     return render_template('gartic-phone.html')
 
+@app.route('/fnaf')
+def fnaf():
+    return render_template('fnaf.html')
 @app.route('/gartic-join')
 def garticjoin():
     return render_template('gartic-join.html')
