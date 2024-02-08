@@ -5,7 +5,6 @@ app = Flask(__name__)
 @app.route('/')
 def main():
     return render_template('main.html')
-
 @app.route('/mc')
 def index():
     return render_template('index.html')
@@ -25,10 +24,10 @@ def gartic():
 @app.route('/fnaf')
 def fnaf():
     return render_template('fnaf.html')
-
 @app.route('/gartic-join')
 def garticjoin():
     return render_template('gartic-join.html')
+
 
 @app.route('/updates')
 def updates():
@@ -47,4 +46,4 @@ def discord():
     return render_template('discord.html')
 
 if __name__ == '__main__':
-    app.run(host='10.0.0.125', port=5000)
+    app.run(debug=True, host='0.0.0.0')
