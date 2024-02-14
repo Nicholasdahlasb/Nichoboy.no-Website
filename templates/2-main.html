@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nichoboy.no</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+        .hero {
+            background-color: #f0f0f0;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: "Arial Black", sans-serif;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .games-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .game {
+            width: calc(20% - 20px);
+            margin: 10px;
+            text-align: center;
+        }
+
+        .game img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .game img:hover {
+            transform: scale(1.1);
+        }
+
+        .game p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top bar -->
+    {% include '2-topbar.html' %}
+
+    <!-- Hero section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to Nichoboy.no</h1>
+            <p>Hello, I'm Nicholas. Welcome to my website.</p>
+            <p>This is a dedicated website set up for me and my friends.</p>
+        </div>
+    </header>
+
+    <!-- Discord section -->
+    <section id="discord" class="section">
+        <div class="container">
+            <h2>Discord</h2>
+            <p>Join our Discord community to chat and connect with us!</p>
+            <a href="https://discord.gg/q53E552ErA" class="button" target="_blank">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Minecraft section -->
+    <section id="minecraft" class="section">
+        <div class="container">
+            <h2>Minecraft</h2>
+            <p>Explore our Minecraft server and join the adventure!</p>
+            <a href="/mc" class="button">Play Now</a>
+        </div>
+    </section>
+
+    <!-- Games section -->
+    <section id="games" class="section">
+        <div class="container">
+            <h2>Games</h2>
+            <div class="games-list">
+                <div class="game">
+                    <p>Gartic Phone</p>
+                </div>
+                <div class="game">
+                    <p>Skribble</p>
+                </div>
+                <div class="game">
+                    <p>Five Nights at Freddy's: Custom Night</p>
+                </div>
+                <div class="game">
+                    <p>Mario</p>
+                </div>
+                <div class="game">
+                    <p>Doom</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

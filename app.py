@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/old')
 def main():
     return render_template('main.html')
 @app.route('/mc')
@@ -44,6 +44,14 @@ def doom():
 @app.route('/discord')
 def discord():
     return render_template('discord.html')
+
+
+
+
+# Under her finner du alle funksjoner til new website overhaul
+@app.route('/')
+def main2():
+    return render_template('2-main.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
