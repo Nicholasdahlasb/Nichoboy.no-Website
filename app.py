@@ -24,6 +24,9 @@ def gartic():
 @app.route('/fnaf')
 def fnaf():
     return render_template('fnaf.html')
+@app.route('/mods')
+def mods():
+    return render_template('mods.html')
 @app.route('/gartic-join')
 def garticjoin():
     return render_template('gartic-join.html')

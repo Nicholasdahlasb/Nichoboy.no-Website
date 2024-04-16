@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Minecraft', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .rules {
+            padding: 10px;
+            border: 5px solid #4CAF50;
+            border-radius: 0;
+            text-align: center;
+        }
+        h2 {
+            color: #0f0; /* Creeper green */
+        }
+        .button {
+            background-color: #00BFFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #00A5FF;
+        }
+    </style>
+</head>
+<body>
+    {% include 'topbar.html' %}
+    <div class="rules">
+        <h2>Download Mods</h2>
+        <a href="{{ url_for('static', filename='forge-1.16.5-mods.rar') }}" class="button" download>Download</a>
+    </div>
+
+</body>
+</html>
